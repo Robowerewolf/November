@@ -1,0 +1,26 @@
+#include <iostream>
+#include <ctime>
+using namespace std;
+
+int num[100];
+int x;
+int main() {
+	srand(time(NULL));
+
+	
+
+	for (int i = 0; i < 100; i++) {
+		x = rand() % 50;
+		num[i] = x;
+
+
+		if (num[i] == 42) 
+			cout << "you have 42" << endl;
+		
+		else
+			cout << "You did not have 42" << endl;
+		
+		
+
+	}
+}
