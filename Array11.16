@@ -1,0 +1,26 @@
+#include <iostream>
+#include <string>
+using namespace std;
+
+string inv[8];
+string item;
+
+int main() {
+	cout << "What is in your inventory?(8 Items)" << endl;
+	getline(cin, inv[0]);
+	getline(cin, inv[1]);
+	getline(cin, inv[2]);
+	getline(cin, inv[3]);
+	getline(cin, inv[4]);
+	getline(cin, inv[5]);
+	getline(cin, inv[6]);
+	getline(cin, inv[7]);
+
+	for (int i = 0; i <= 8; i++) {
+		if (inv[i].compare("magic sword") == 0)
+			cout << "You are ready to fight Alucard" << endl;
+
+		else
+			cout << "You're a loser. You died." << endl;
+	}
+}
