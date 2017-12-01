@@ -1,0 +1,26 @@
+#include<iostream>
+using namespace std;
+int health = 100;
+//declare
+double Battle(int defense, int attack);
+int main() {
+	while (health >0) {
+		int Attack;
+		int Defense;
+		cout << "enter defense and attack levels" << endl;
+		cin >> Attack;
+		cin >> Defense;
+		health = health - Battle(Defense, Attack);
+		cout << "your health is now " << health << endl << endl;
+		system("pause");
+	}
+	cout << "you be ded." << endl;
+	system("pause");
+}
+//define
+double Battle(int defense, int attack) {
+	cout << "POW BAM WHAP OOOF" << endl;
+	int num = rand() % 20 + 1;
+	num = num*attack - defense;
+	return num;
+}
