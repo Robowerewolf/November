@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+
+double calculate(char a, int x, int y);
+
+char meleon;
+int num;
+int num2;
+int sum;
+int main() {
+	while (1) {
+		cout << "Do you want to add(a), subtract(s), multiply(m), divide(d), or find the remainder(r) of the two ints?" << endl;
+		cin >> meleon;
+
+		cout << "Give me two numbers to do math with" << endl;
+		cin >> num;
+		cin >> num2;
+
+		cout << calculate(meleon, num, num2);
+  }
+}
+double calculate(char a, int x, int y) {
+	if (meleon == 'a')
+		sum = num + num2;
+	if (meleon == 's')
+		sum = num - num2;
+	if (meleon == 'm')
+		sum = num * num2;
+	if (meleon == 'd')
+		sum = num / num2;
+	if (meleon == 'r')
+		sum = num % num2;
+
+	return sum;
+}
